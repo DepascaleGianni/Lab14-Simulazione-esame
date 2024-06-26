@@ -48,7 +48,7 @@ class View(ft.UserControl):
             width=200,
             hint_text="Soglia (s)"
         )
-        self.btn_countedges = ft.ElevatedButton(text="Conta Archi", on_click=self._controller.handle_countedges)
+        self.btn_countedges = ft.ElevatedButton(text="Conta Archi", on_click=self._controller.handle_countedges,disabled=True)
         row2 = ft.Row([self.txt_name, self.btn_countedges],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row2)
@@ -58,7 +58,7 @@ class View(ft.UserControl):
         self._page.controls.append(self.txt_result2)
         self._page.update()
 
-        self.btn_search = ft.ElevatedButton(text="Cerca cammino", on_click=self._controller.handle_search)
+        self.btn_search = ft.ElevatedButton(text="Cerca cammino", on_click=self._controller.handle_search,disabled=True)
         row3 = ft.Row([self.btn_search],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row3)
